@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ohboi</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800" rel="stylesheet" type="text/css">
+<script src="script.js"></script>
+</head>
+<body>
+<video></video>
+  <header>
+  </header>
+
+  <main>
+
+    <section>
+      <h1 class="got">You just got</h1>
+
+
+    </section>
+
+  </main>
+
+  <footer>
+  </footer>
+  <script>
+    function getParamValue(param) {
+      var urlParamString = location.search.split(param + "=");
+      if (urlParamString.length <= 1) return "";
+      else {
+          var tmp = urlParamString[1].split("&");
+          return tmp[0];
+      }
+    }
+    function addDot(){
+      document.querySelector('.got').innerHTML += ".";
+    }
+
+    [1000,2000,3000,4000].map(function(duration){
+      setTimeout(addDot, duration);;
+    })
+    setTimeout(function(){
+      window.location = '/badminton.html?dice=' + getParamValue('dice');
+    }, 5000);
+
+  </script>
+</body>
+</html>

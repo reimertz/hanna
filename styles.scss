@@ -1,0 +1,122 @@
+$base-font  : serif;                  ; $page-width:        90%;
+$base-size  : 17;                     ; $max-width:         70rem;
+$leading    : 27;
+
+@mixin large {
+  @media only screen and (min-width: 1110px) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media only screen and (min-width: 481px) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media only screen and (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}
+}
+
+
+html {
+  font: normal #{$base-size}px/#{$leading / $base-size} $base-font;
+  font-family: 'Open Sans';
+  text-align: center;
+
+  @include small {
+    font-size: 0.5rem;
+  }
+
+  @include medium {
+    font-size: 0.75rem;
+  }
+
+  @include large {
+    font-size: 1rem;
+  }
+}
+
+body {
+  background: #FFE11A;
+  color: #1F8A70;
+
+  &.date {
+    background: #1F8A70;
+  color: #FFE11A;
+  }
+}
+
+
+
+header, main, footer {
+  max-width: $max-width;
+  width: $page-width;
+  margin: 0 auto;
+}
+
+
+@include placeholder {
+  font-family: 'Open Sans';
+  color: #FFE11A;
+  font-weight: 700;
+  font-size: 7rem;
+  content: 'What #?';
+
+}
+
+input {
+  text-align: center;
+  font-family: 'Open Sans';
+  font-weight: 700;
+  font-size: 7rem;
+  color: #FFE11A;
+  background: #1F8A70;
+  width: 100%;
+  border: none;
+}
+
+.button {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 7rem;
+  font-family: 'Open Sans';
+  background-color: #FFE11A;
+  color: #1F8A70;
+  padding: 1rem;
+}
+
+.button:hover {
+  transform: scale(1.5);
+  transition-duration: 100ms;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+
+h1 {
+  font-size: 7rem;
+}
+
+h2 {
+  font-size: 5rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 2rem;
+}

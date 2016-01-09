@@ -1,0 +1,91 @@
+html {
+  font: normal 17px / 1.58824 serif;
+  font-family: 'Open Sans';
+  text-align: center; }
+  @media only screen and (max-width: 480px) {
+    html {
+      font-size: 0.5rem; } }
+  @media only screen and (min-width: 481px) {
+    html {
+      font-size: 0.75rem; } }
+  @media only screen and (min-width: 1110px) {
+    html {
+      font-size: 1rem; } }
+
+body {
+  background: #FFE11A;
+  color: #1F8A70; }
+  body.date {
+    background: #1F8A70;
+    color: #FFE11A; }
+
+header, main, footer {
+  max-width: 70rem;
+  width: 90%;
+  margin: 0 auto; }
+
+::-webkit-input-placeholder {
+  font-family: 'Open Sans';
+  color: #FFE11A;
+  font-weight: 700;
+  font-size: 7rem;
+  content: 'What #?'; }
+
+:-moz-placeholder {
+  font-family: 'Open Sans';
+  color: #FFE11A;
+  font-weight: 700;
+  font-size: 7rem;
+  content: 'What #?'; }
+
+::-moz-placeholder {
+  font-family: 'Open Sans';
+  color: #FFE11A;
+  font-weight: 700;
+  font-size: 7rem;
+  content: 'What #?'; }
+
+:-ms-input-placeholder {
+  font-family: 'Open Sans';
+  color: #FFE11A;
+  font-weight: 700;
+  font-size: 7rem;
+  content: 'What #?'; }
+
+input {
+  text-align: center;
+  font-family: 'Open Sans';
+  font-weight: 700;
+  font-size: 7rem;
+  color: #FFE11A;
+  background: #1F8A70;
+  width: 100%;
+  border: none; }
+
+.button {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 7rem;
+  font-family: 'Open Sans';
+  background-color: #FFE11A;
+  color: #1F8A70;
+  padding: 1rem; }
+
+.button:hover {
+  transform: scale(1.5);
+  transition-duration: 100ms; }
+
+a {
+  text-decoration: none !important; }
+
+h1 {
+  font-size: 7rem; }
+
+h2 {
+  font-size: 5rem; }
+
+h3 {
+  font-size: 3rem; }
+
+h4 {
+  font-size: 2rem; }

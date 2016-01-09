@@ -16,7 +16,7 @@
     <section>
       <h1 class="got">Oh, you got </h1>
       <h2 class="got">I wonder what this could mean..</h2>
-      <a class="button" href=" what.html">STFU, what is it?!</a>
+      <a class="button" href="what.html">STFU, what is it?!</a>
     </section>
 
   </main>
@@ -26,14 +26,17 @@
   <script>
     function getParamValue(param) {
       var urlParamString = location.search.split(param + "=");
-      if (urlParamString.length <= 1) return "";
+      if (urlParamString.length <= 1) return '';
       else {
-          var tmp = urlParamString[1].split("&");
-          return tmp[0];
+          var num = urlParamString[1];
+          return num ? num.split('&')[0] : Math.floor(Math.random() * 6) + 1;
       }
     }
-    document.querySelector('.got').innerHTML += getParamValue('dice') + "!";
-    document.querySelector('a').href += "?dice=" + getParamValue('dice');
+
+    var res = getParamValue('dice');
+
+    document.querySelector('.got').innerHTML += res + "!";
+    document.querySelector('a').href += "?dice=" + res;
 
   </script>
 </body>

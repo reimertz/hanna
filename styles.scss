@@ -85,7 +85,12 @@ input {
   border: none;
 }
 
+.hidden{
+  opacity: 0;
+}
+
 .button {
+  transition: 200ms;
   display: inline-block;
   font-weight: 700;
   font-size: 7rem;
@@ -119,4 +124,38 @@ h3 {
 
 h4 {
   font-size: 2rem;
+}
+
+
+@keyframes dance {
+  0% {
+    transform: skewX(0);
+  }
+
+  25% {
+    transform: skewX(45deg);
+  }
+
+  50% {
+    transform: skewX(0);
+  }
+
+  75% {
+    transform: skewX(-45deg);
+  }
+
+  100% {
+    transform: skewX(0);
+  }
+}
+
+img{
+  z-index: -1;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  animation-name: dance;
+  animation-iteration-count: infinite;
+  animation-duration: 1500ms;
 }

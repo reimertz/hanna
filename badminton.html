@@ -25,26 +25,20 @@
     z-index: -3;
     opacity: 0.2;
   }
-
-  img{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-  }
-
 </style>
 </head>
 <body>
 <video src="video.mp4" width="100%" height="100%" muted autoplay></video>
-<audio src="audio.mp4" width="100%" height="100%" muted autoplay></audio>
+<audio src="audio.mp3" width="100%" height="100%" autoplay time="100"></audio>
   <header>
   </header>
   <canvas id="world"></canvas>
   <main>
 
     <section>
+      <h1 >Happy BD!</h1>
       <h1 class="got">Badminton x </h1>
-      <h3 class="got">You decide the <u>dates</u>, and we fix <u>breakfast</u> and <u>badminton.</u></h3>
+      <h3 class="got">You decide the <u>dates</u>, and I book badminton.</u></h3>
       <img src="the-team.png" width="100%" height="auto" alt="">
     </section>
 
@@ -62,6 +56,7 @@
       }
     }
     document.querySelector('.got').innerHTML += getParamValue('dice') + "!";
+    document.querySelector('audio').currentTime = 101;
 
 
   </script>
